@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 0 20px;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+}
+
+.nav-bar {
+  width: 80vw;
+}
+
+.nav-items {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  
+}
+
+.nav-item{
+  transition: font-size 0.1s ease-out ;
+}
+
+.nav-item:hover{
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: underline;
+
+}
