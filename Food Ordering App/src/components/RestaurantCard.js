@@ -19,13 +19,13 @@ const RestaurantCard = (props) => {
         <img alt="res-image" src={CDN_URL + resData.info.cloudinaryImageId} />
       </div>
       <div className="res-details">
-        <h3 className="res-name">{name}</h3>
+        <p className="res-name">{name}</p>
         <div className="min-details">
           <div className="rating">
             {STAR_ICON}
-            <span className="star-rating">{avgRating} •</span>
+            <p className="star-rating">{avgRating} •</p>
           </div>
-          <span className="time-req">{sla.slaString}</span>
+          <p className="time-req">{sla.slaString}</p>
         </div>
         <div className="last-details">
           <p className="cuisines">{cuisines.join(", ")}</p>
