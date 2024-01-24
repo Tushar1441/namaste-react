@@ -56,6 +56,7 @@ li {
 a,
 a:focus,
 a:visited {
+  color: #3d4152;
   text-decoration: none;
 }
 
@@ -328,6 +329,7 @@ section {
   min-height: 234px;
   border-radius: 20px;
   transition: transform 0.2s ease-in-out;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .res-card:hover {
@@ -658,3 +660,26 @@ section {
   object-fit: cover;
   border-radius: 6px;
 }
+
+/* --------------------------------------------------------------- */
+
+.support-user {
+  margin: 20px auto;
+  padding: 20px 40px;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cnt-btn{
+  width: fit-content;
+  padding: 8px 4px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+}
+
+

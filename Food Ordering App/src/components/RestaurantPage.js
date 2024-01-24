@@ -8,12 +8,14 @@ import {
 import Shimmer from "./Shimmer";
 import CategoryPage from "./CategoryPage";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const RestaurantPage = () => {
   const [resInfo, setResInfo] = useState(null);
+  const { resId } = useParams();
 
   const fetchData = async () => {
-    const data = await fetch(RES_URL + "42244");
+    const data = await fetch(RES_URL + resId);
     const json = await data.json();
     setResInfo(json?.data);
   };
