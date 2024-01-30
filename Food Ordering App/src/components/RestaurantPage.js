@@ -1,5 +1,4 @@
 import {
-  RES_URL,
   COST_ICON,
   TIME_ICON,
   STAR_ICON,
@@ -7,22 +6,13 @@ import {
 } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import CategoryPage from "./CategoryPage";
-import { useState, useEffect } from "react";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 import { useParams } from "react-router-dom";
 
 const RestaurantPage = () => {
-  const [resInfo, setResInfo] = useState(null);
   const { resId } = useParams();
-
-  const fetchData = async () => {
-    const data = await fetch(RES_URL + resId);
-    const json = await data.json();
-    setResInfo(json?.data);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const resInfo = useRestaurantMenu(resId);
+  console.log(resInfo);
 
   if (resInfo === null) return <Shimmer />;
 
@@ -35,6 +25,7 @@ const RestaurantPage = () => {
     costForTwoMessage,
     sla,
   } = resInfo?.cards[0]?.card?.card?.info;
+
 
   const { cards } = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR;
 
