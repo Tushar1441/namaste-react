@@ -10,14 +10,18 @@ const Body = () => {
   const [searchBtnText, setSearchBtnText] = useState("");
 
   const fetchData = async () => {
-    const data = await fetch(Swiggy_API);
-    const json = await data.json();
-    setListOfRestaurants(
-      json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    setFilteredRestaurants(
-      json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    try {
+      const data = await fetch(Swiggy_API);
+      const json = await data.json();
+      const restaurantData =
+        json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
+
+      setListOfRestaurants(restaurantData);
+      setFilteredRestaurants(restaurantData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
 
   const topRestaurantFilter = () => {
@@ -72,7 +76,6 @@ const Body = () => {
       <div className="res-container">
         {filteredRestaurants.map((restaurant) => (
           <Link className="res-card" to={"/restaurants/" + restaurant.info.id}>
-            {" "}
             <RestaurantCard
               key={restaurant.info.id}
               resData={restaurant}
@@ -85,3 +88,15 @@ const Body = () => {
 };
 
 export default Body;
+
+/**
+ * const onlineStatus = useOnlineStatus();
+
+ * if (onlineStatus === false)
+  return (
+    <h1>
+      Looks like You are disconnected from the internet. Please check your
+      internet connection!
+    </h1>
+  );
+*/

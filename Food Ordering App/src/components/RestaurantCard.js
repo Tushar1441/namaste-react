@@ -3,21 +3,12 @@ import { CDN_URL, STAR_ICON } from "../utils/constants";
 const RestaurantCard = (props) => {
   const { resData } = props;
 
-  const {
-    name,
-    avgRating,
-    costForTwo,
-    sla,
-    cuisines,
-    locality,
-    cloudinaryImageId,
-  } = resData?.info;
+  const { name, cloudinaryImageId, avgRating, areaName, sla, cuisines } =
+    resData?.info;
 
   return (
     <div className="res-card">
-      <div className="res-img">
-        <img alt="res-image" src={CDN_URL + resData.info.cloudinaryImageId} />
-      </div>
+      <img className="res-img" alt="res-image" src={CDN_URL + cloudinaryImageId} />
       <div className="res-details">
         <p className="res-name">{name}</p>
         <div className="min-details">
@@ -29,7 +20,7 @@ const RestaurantCard = (props) => {
         </div>
         <div className="last-details">
           <p className="cuisines">{cuisines.join(", ")}</p>
-          <p className="res-address">{locality}</p>
+          <p className="res-address">{areaName}</p>
         </div>
       </div>
     </div>

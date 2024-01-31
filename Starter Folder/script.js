@@ -12,7 +12,6 @@ const jsxHeading = (
   </h1>
 );
 
-
 //React Component
 const ComponentHeading = () => (
   <div>
@@ -20,7 +19,6 @@ const ComponentHeading = () => (
     <h1>Hello Everyone Using Component</h1>;
   </div>
 );
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
