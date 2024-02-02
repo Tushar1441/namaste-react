@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {
   LOGO_URL,
   CART_ICON,
@@ -9,15 +9,10 @@ import {
   SEARCH_ICON,
 } from "../utils/constants";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
-  const [loginBtnText, setLoginBtnText] = useState("Tushar Bansal");
-
-  const loginBtnChange = () => {
-    loginBtnText === "Login"
-      ? setLoginBtnText("Tushar Bansal")
-      : setLoginBtnText("Login");
-  };
+  const { loggedInUser } = useContext(UserContext);
 
   return (
     <header className="header">
@@ -36,15 +31,16 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <div className="item">
-                <Link className="link" to="/my-account">
+                <Link className="link" to="/user">
                   <span className="nav-item-icon">{LOGIN_ICON}</span>
-                  <span className="login-span">{loginBtnText}</span>
+                  <span className="login-span">{loggedInUser}</span>
                 </Link>
               </div>
             </li>
+
             <li className="nav-item">
               <div className="item">
-                <Link to="/support" className="link">
+                <Link to="/help" className="link">
                   <span className="nav-item-icon">{HELP_ICON}</span>
                   Help
                 </Link>

@@ -1,9 +1,8 @@
-import User from "./User";
 
 const Support = () => {
   return (
     <div className="support">
-      <User name={"Tushar Bansal"} location={"Chandigarh, India"}/>
+      Contact No. - 1234567890
     </div>
   );
 };

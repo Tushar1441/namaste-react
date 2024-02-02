@@ -1,23 +1,35 @@
 import { DOWN_ARROW } from "../utils/constants";
+import { useState } from "react";
 import useRestaurantItems from "../utils/useRestaurantItems";
-import ItemList from "./Itemlist";
+import ItemCardComponent from "../utils/ItemCardComponent";
 
 const CategoryPage = ({ categoryData }) => {
   const { title, itemCards, categories } = categoryData?.card.card;
   const ItemCards = useRestaurantItems(itemCards, categories);
 
+  const [showItem, setShowItem] = useState(true);
+
+  const handleClick = () => {
+    setShowItem(!showItem);
+  };
+
   return (
     <div className="category-container">
       <div className="category-item">
-        <button className="res-menu-item-btn res-menu-item-margin ">
+        <button
+          className="res-menu-item-btn res-menu-item-margin "
+          onClick={handleClick}
+        >
           <h3 className="res-menu-item-heading">
             {title} ({ItemCards.length})
           </h3>
-          {/* className={show ? "icon-down-arrow" : "icon-up-arrow"} */}
-          <span>{DOWN_ARROW}</span>
+          <span className={showItem ? "icon-down-arrow" : "icon-up-arrow"}>
+            {DOWN_ARROW}
+          </span>
         </button>
       </div>
-      <ItemList items={ItemCards} />
+      {showItem && <ItemCardComponent items={ItemCards} />}
+
       <div className="main-border"></div>
     </div>
   );
