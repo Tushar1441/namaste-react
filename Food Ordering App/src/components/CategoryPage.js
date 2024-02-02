@@ -1,7 +1,7 @@
-import { DOWN_ARROW } from "../utils/constants";
 import { useState } from "react";
+import { DOWN_ARROW } from "../utils/constants";
 import useRestaurantItems from "../utils/useRestaurantItems";
-import ItemCardComponent from "../utils/ItemCardComponent";
+import ItemCardComponent from "./ItemCardComponent";
 
 const CategoryPage = ({ categoryData }) => {
   const { title, itemCards, categories } = categoryData?.card.card;
