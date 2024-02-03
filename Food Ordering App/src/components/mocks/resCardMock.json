@@ -1,0 +1,75 @@
+{
+    "info": {
+        "id": "43834",
+        "name": "Subway",
+        "cloudinaryImageId": "63178e3e64d503a479f2a2048a474552",
+        "areaName": "Sector 11",
+        "costForTwo": "₹350 for two",
+        "cuisines": [
+            "Healthy Food",
+            "Salads",
+            "Snacks",
+            "Desserts",
+            "Beverages"
+        ],
+        "avgRating": 4.1,
+        "parentId": "2",
+        "avgRatingString": "4.1",
+        "totalRatingsString": "5K+",
+        "sla": {
+            "deliveryTime": 23,
+            "lastMileTravel": 1.4,
+            "serviceability": "SERVICEABLE",
+            "slaString": "20-25 mins",
+            "lastMileTravelString": "1.4 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-02-04 00:00:00",
+            "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "loyaltyDiscoverPresentationInfo": {
+            "logoCtx": {
+                "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+            },
+            "freedelMessage": "FREE DELIVERY",
+            "badgeType": "BADGE_TYPE_ONE_LITE"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {
+        "context": "seo-data-b43d805c-8c85-494d-8727-0b590b00839a"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/subway-sector-11-chandigarh-43834",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

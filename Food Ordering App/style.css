@@ -73,6 +73,20 @@ section {
   display: block;
 }
 
+label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
 /* --------------------------------------------------------------------- */
 
 .app {
@@ -758,7 +772,75 @@ section {
   transform: scale(0.95);
 }
 
-.cart-display{
+.cart-display {
   text-align: center;
   margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------- */
+
+.about-body,
+.help-body {
+  min-width: 600px;
+  max-width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.contact-form {
+  border-top: 1px dashed gray;
+  margin-top: 16px;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.label-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.label-input-container label {
+  margin-left: 4px;
+}
+
+.contact-input,
+.input-desc {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.input-desc {
+  height: 200px;
+}
+
+.input-desc::placeholder {
+  text-align: top;
+  vertical-align: top;
+}
+
+.submit-btn {
+  background-color: #000;
+  color: #fff;
+  margin-top: 10px;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  border-radius: 5px;
+}
+
+.contact-input:focus,
+.input-desc:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
