@@ -16,7 +16,6 @@ const Body = () => {
       const restaurantData =
         json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants;
-
       setListOfRestaurants(restaurantData);
       setFilteredRestaurants(restaurantData);
     } catch (error) {

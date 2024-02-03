@@ -31,12 +31,5 @@ const ItemList = ({ items }) => {
 
 export default ItemList;
 
-/***
- *         <div key={item.card.info.name} className="item-card">
-         
-
-
-          </div>
-
-        </div>
- */
+COVCELQ4KIDwt425hIXsDjCnEzgB
+COVCELQ4KIDwt425hIXsDjCnEzgB

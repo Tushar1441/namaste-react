@@ -66,24 +66,23 @@ const Header = () => {
               <div className="item">
                 <Link to="/help" className="link">
                   <span className="nav-item-icon">{HELP_ICON}</span>
-                  <span>Help</span>
+                  <span>Contact Us</span>
                 </Link>
               </div>
             </li>
-
+            <li className="nav-item">
+              <div className="item">
+                <Link to="/about" className="link">
+                  <span className="nav-item-icon">{LOGIN_ICON}</span>
+                  <span>About Us</span>
+                </Link>
+              </div>
+            </li>
             <li className="nav-item">
               <div className="item">
                 <Link to="/offers" className="link">
                   <span className="nav-item-icon">{OFFERS_ICON}</span>
                   <span>Offers</span>
-                </Link>
-              </div>
-            </li>
-            <li className="nav-item">
-              <div className="item">
-                <Link to="/search" className="link">
-                  <span className="nav-item-icon">{SEARCH_ICON}</span>
-                  <span>Search</span>
                 </Link>
               </div>
             </li>

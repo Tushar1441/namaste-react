@@ -4,10 +4,14 @@ import { useSelector, useDispatch } from "react-redux";
 
 const Cart = () => {
   const items = useSelector((store) => store.cart.items);
+  const uniqueItems = items.filter(
+    (value, index, array) => array.indexOf(value) === index
+  );
+
   const dispatch = useDispatch();
 
   const handleClearCart = () => {
-    dispatch(clearCart);
+    dispatch(clearCart());
   };
 
   return (
@@ -24,7 +28,7 @@ const Cart = () => {
         </div>
       )}
 
-      <ItemCardComponent items={items} />
+      <ItemCardComponent items={uniqueItems} />
     </div>
   );
 };
