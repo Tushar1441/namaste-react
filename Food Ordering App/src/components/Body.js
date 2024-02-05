@@ -10,17 +10,12 @@ const Body = () => {
   const [searchBtnText, setSearchBtnText] = useState("");
 
   const fetchData = async () => {
-    try {
-      const data = await fetch(Swiggy_API);
-      const json = await data.json();
-      const restaurantData =
-        json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants;
-      setListOfRestaurants(restaurantData);
-      setFilteredRestaurants(restaurantData);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+    const data = await fetch(Swiggy_API);
+    const json = await data.json();
+    const restaurantData =
+      json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    setListOfRestaurants(restaurantData);
+    setFilteredRestaurants(restaurantData);
   };
 
   const topRestaurantFilter = () => {
@@ -49,13 +44,18 @@ const Body = () => {
         <input
           type="text"
           value={searchBtnText}
+          data-testid="searchInputBox"
           placeholder="Search For restaurants and foods"
           className="search-input"
           onChange={(e) => {
             setSearchBtnText(e.target.value);
           }}
         />
-        <button className="search-btn" onClick={searchFilter}>
+        <button
+          className="search-btn"
+          data-testid="searchBtn"
+          onClick={searchFilter}
+        >
           {SEARCH_ICON}
         </button>
       </div>
@@ -67,18 +67,23 @@ const Body = () => {
         <button className="filter-btn filter-main">
           Filters {FILTER_ICON}
         </button>
-        <button className="filter-btn" onClick={topRestaurantFilter}>
+        <button
+          className="filter-btn"
+          data-testid="topRatedFilterBtn"
+          onClick={topRestaurantFilter}
+        >
           Top Rated Restaurants
         </button>
       </div>
 
       <div className="res-container">
         {filteredRestaurants.map((restaurant) => (
-          <Link className="res-card" to={"/restaurants/" + restaurant.info.id}>
-            <RestaurantCard
-              key={restaurant.info.id}
-              resData={restaurant}
-            />{" "}
+          <Link
+            key={restaurant.info.id}
+            className="res-card"
+            to={"/restaurants/" + restaurant.info.id}
+          >
+            <RestaurantCard resData={restaurant} />{" "}
           </Link>
         ))}
       </div>

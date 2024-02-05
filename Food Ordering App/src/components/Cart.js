@@ -4,9 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 const Cart = () => {
   const items = useSelector((store) => store.cart.items);
-  const uniqueItems = items.filter(
-    (value, index, array) => array.indexOf(value) === index
-  );
+  const uniqueItems = [...new Set(items)];
 
   const dispatch = useDispatch();
 

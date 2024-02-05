@@ -40,6 +40,7 @@ const Header = () => {
                       </svg>
                     </span>
                     <span
+                    data-testid="cartItemsCount"
                       className={
                         count === 0
                           ? "cart-item-number-zero"

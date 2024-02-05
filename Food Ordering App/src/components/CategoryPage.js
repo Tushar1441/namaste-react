@@ -7,7 +7,7 @@ const CategoryPage = ({ categoryData }) => {
   const { title, itemCards, categories } = categoryData?.card.card;
   const ItemCards = useRestaurantItems(itemCards, categories);
 
-  const [showItem, setShowItem] = useState(true);
+  const [showItem, setShowItem] = useState(false);
 
   const handleClick = () => {
     setShowItem(!showItem);
@@ -19,6 +19,7 @@ const CategoryPage = ({ categoryData }) => {
         <button
           className="res-menu-item-btn res-menu-item-margin "
           onClick={handleClick}
+          data-testid="categoryBtn"
         >
           <h3 className="res-menu-item-heading">
             {title} ({ItemCards.length})

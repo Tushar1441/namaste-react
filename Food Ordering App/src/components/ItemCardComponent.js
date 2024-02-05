@@ -20,7 +20,7 @@ const ItemCardComponent = ({ items }) => {
   return (
     <div className="item-cards">
       {items.map((item) => (
-        <div key={item.card.info.id}>
+        <div data-testid="item-card" key={item.card.info.id}>
           <div className="item-card-container">
             <div className="item-card-details-container">
               <span>
@@ -41,7 +41,7 @@ const ItemCardComponent = ({ items }) => {
               <span className="item-desc">{item.card.info.description}</span>
             </div>
             <div className="item-img-container">
-              <div className="add-btn-container">
+              <div className="add-btn-container" >
                 {cartItems.includes(item) === false ? (
                   <button
                     className="add-btn"
@@ -71,7 +71,6 @@ const ItemCardComponent = ({ items }) => {
                   src={ITEM_IMG_URL + item.card.info.imageId}
                 />
               )}
-
             </div>
           </div>
           <div className="styles-divider"></div>
