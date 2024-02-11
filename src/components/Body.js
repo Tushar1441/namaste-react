@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
-import { FILTER_ICON, SEARCH_ICON, Swiggy_API } from "../utils/constants";
+import { FILTER_ICON, SEARCH_ICON, SWIGGY_API_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,7 @@ const Body = () => {
   const [searchBtnText, setSearchBtnText] = useState("");
 
   const fetchData = async () => {
-    const data = await fetch(Swiggy_API);
+    const data = await fetch(SWIGGY_API_URL);
     const json = await data.json();
     const restaurantData =
       json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;

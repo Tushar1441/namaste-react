@@ -1,18 +1,26 @@
-
-export const LOGO_URL =
-  "https://dynamic.brandcrowd.com/preview/logodraft/1481800c-b13f-4dbf-ab51-bd1a0e9df59d/image/large.png";
+export const LOGO_URL = "../constants/favicon.ico";
 
 export const CDN_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
 export const Swiggy_API =
-  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.7666405&lng=76.7873814&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.7666405&lng=76.7873814";
 
-export const RES_URL =
+export const SWIGGY_API_URL =
+  "https://corsproxy.org/?" + encodeURIComponent(Swiggy_API);
+
+const RES_API_URL =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=30.7666405&lng=76.7873814&restaurantId=";
 
-export const ITEM_IMG_URL =
+export const RES_URL =
+  "https://corsproxy.org/?" + encodeURIComponent(RES_API_URL);
+
+export const ITEM_IMG_API_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
+
+export const ITEM_IMG_URL =
+  "https://corsproxy.org/?" + encodeURIComponent(ITEM_IMG_API_URL);
+
 export const OFFERS_ICON = (
   <svg
     className="_1GTCc"
